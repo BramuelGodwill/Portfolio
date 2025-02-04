@@ -92,7 +92,7 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border:.7rem solid var(--#ac0000);
+    border:.7rem solid var(--springGreen);
     margin-top: 15px;
 }
 
