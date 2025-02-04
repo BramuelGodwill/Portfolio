@@ -215,10 +215,10 @@
 
         // Create the subject and body of the email
         var subject = "Message from " + name;
-        var body = "Message:%0A" + message;
+        var body = "Message:" + message;
 
         // Open the mailto link with the dynamic subject and body
-        window.location.href = 'mailto:bramuelgodwill7@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        window.location.href = 'mailto:bramuelgodwill7@gmail.com?subject=' + encodeURIComponent(subject) + encodeURIComponent(body);
     }
 </script>
 
