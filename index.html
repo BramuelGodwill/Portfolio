@@ -198,14 +198,32 @@
 
     </div>
 
-    <form action="">
+    <form action="javascript:void(0);" onsubmit="sendEmail()">
+    <input type="text" id="name" placeholder="Name" class="box" required>
+    <input type="email" id="email" placeholder="Email" class="box" required>
+    <textarea id="message" cols="30" rows="10" class="box message" placeholder="Message" required></textarea>
+    <button type="submit" class="btn">
+        Send <i class="fas fa-paper-plane"></i>
+    </button>
+</form>
 
-        <input type="text" placeholder="name" class="box">
-        <input type="email" placeholder="email" class="box">
-        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-        <button type="button" class="btn" onclick="window.location.href='mailto:bramuelgodwill7@gmail.com?subject=Subject&body=Hello%20there!'">
-    Send <i class="fas fa-paper-plane"></i>
-</button>
+<script>
+    function sendEmail() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Create the subject and body of the email
+        var subject = "Message from " + name;
+        var body = "Name: " + name + "%0A" +
+                   "Email: " + email + "%0A%0A" +
+                   "Message:%0A" + message;
+
+        // Open the mailto link with the dynamic subject and body
+        window.location.href = 'mailto:bramuelgodwill7@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+</script>
+
 
 </button>
 
