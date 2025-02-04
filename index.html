@@ -215,18 +215,13 @@
         // Set the email subject to include the user's name
         var subject = "Message from " + name;
         
-        // Create the email body with user-provided name and message
-        var body = "Name: " + name + "%0A%0A" + "Message:%0A" + message;
+        // Create the email body with user-provided name and message, using \n for newlines
+        var body = "Name: " + name + "\n\nMessage:\n" + message;
 
         // Open the mailto link with the dynamic subject and body
         window.location.href = 'mailto:bramuelgodwill7@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     }
 </script>
-
-
-
-</button>
-
 
     </form>
 
