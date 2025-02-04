@@ -210,17 +210,19 @@
 <script>
     function sendEmail() {
         var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
         var message = document.getElementById('message').value;
 
-        // Create the subject and body of the email
+        // Set the email subject to include the user's name
         var subject = "Message from " + name;
-        var body = "message;
+        
+        // Create the email body with user-provided name and message
+        var body = "Name: " + name + "%0A%0A" + "Message:%0A" + message;
 
         // Open the mailto link with the dynamic subject and body
-        window.location.href = 'mailto:bramuelgodwill7@gmail.com?subject=' + encodeURIComponent(subject)+ message;
+        window.location.href = 'mailto:bramuelgodwill7@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     }
 </script>
+
 
 
 </button>
